@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>partial_content_server</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="assets\grade4.mp3" />
+        <EmbeddedResource Include="assets\grade4.mp3" />
+        <None Remove="assets\img10.jpg" />
+        <EmbeddedResource Include="assets\img10.jpg" />
+        <None Remove="assets\img11.jpg" />
+        <EmbeddedResource Include="assets\img11.jpg" />
+        <None Remove="assets\img12.jpg" />
+        <EmbeddedResource Include="assets\img12.jpg" />
+        <None Remove="assets\text1.txt" />
+        <None Remove="assets\text2.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+    </ItemGroup>
+
+</Project>
